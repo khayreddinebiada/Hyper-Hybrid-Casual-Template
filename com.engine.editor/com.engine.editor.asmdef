@@ -1,0 +1,19 @@
+{
+    "name": "com.engine.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:08297ee21af0e7f4e93f07820c4fc2af",
+        "GUID:9cf4df86725773f4fbe1a24aa6723d4a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
