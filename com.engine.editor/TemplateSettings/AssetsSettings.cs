@@ -1,7 +1,7 @@
-using Engine.Attribute;
+using HCEngine.Attributes;
 using UnityEngine;
 
-namespace Editor
+namespace HCEditor
 {
     [TemplateSettings(FilePath, FileName)]
     public class AssetsSettings : ScriptableObject

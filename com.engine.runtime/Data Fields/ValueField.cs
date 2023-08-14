@@ -2,7 +2,7 @@ using UnityEngine;
 using System.IO;
 using System;
 
-namespace Engine.Data
+namespace HCEngine.Data
 {
     [Serializable]
     public class ValueField<T> : IValueField<T>
@@ -34,25 +34,20 @@ namespace Engine.Data
         {
             get
             {
-                if (_isLoaded == true) return _value;
+                if (_isLoaded == true)
+                    return _value;
 
-                _isLoaded = true;
-                return _value = ES3.Load(_key, FilePath(_fileName), _value);
+                return _value = Load();
             }
             set
             {
-                
-                if (_value == null || !_value.Equals(value))
-                {
-                    _value = value;
-                    if (_autoSave == true)
-                    {
-                        
-                        Save();
-                    }
-                    
-                }
-                
+                if (_value != null && _value.Equals(value))
+                    return;
+
+                _value = value;
+
+                if (_autoSave == true)
+                    Save();
             }
         }
 
@@ -61,7 +56,7 @@ namespace Engine.Data
             ES3.Save(_key, _value, FilePath(_fileName));
         }
 
-        public void Delete()
+        public void DeleteKey()
         {
             ES3.DeleteKey(_key, FilePath(_fileName));
         }
@@ -74,6 +69,18 @@ namespace Engine.Data
                 Directory.CreateDirectory(directoryPath);
 
             return $"{directoryPath}{fileName}.json";
+        }
+
+        public T Load()
+        {
+            _isLoaded = true;
+            return ES3.Load(_key, FilePath(_fileName), _value);
+        }
+
+        public T Load(T defaultValue)
+        {
+            _isLoaded = true;
+            return ES3.Load(_key, FilePath(_fileName), defaultValue);
         }
     }
 }

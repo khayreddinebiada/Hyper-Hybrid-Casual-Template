@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Engine.Data
+namespace HCEngine.Data
 {
 	public static class BinarySearchExtensions
 	{

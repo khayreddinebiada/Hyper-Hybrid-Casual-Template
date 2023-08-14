@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Engine.Attribute;
+using HCEngine.Attributes;
 using UnityEditor;
 using UnityEngine;
 using System;
 
-namespace Editor
+namespace HCEditor
 {
     public static class ProjectSettingsTemplate
     {

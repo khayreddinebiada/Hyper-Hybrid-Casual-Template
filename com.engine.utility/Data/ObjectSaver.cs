@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
-namespace Data
+namespace HCEngine.Data
 {
     public static class ObjectSaver
     {

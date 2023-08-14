@@ -4,9 +4,10 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "com.engine.editor",
         "com.template.engine",
-        "com.engine.utility"
+        "com.engine.utility",
+        "com.template.core",
+        "com.engine.gamemeta"
     ],
     "includePlatforms": [
         "Editor"

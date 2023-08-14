@@ -1,9 +1,8 @@
 #if UNITY_EDITOR
-using Engine;
+using HCEngine;
 using UnityEditor;
-using UnityEngine;
 
-namespace Editor
+namespace HCEditor
 {
     [InitializeOnLoad]
     public class EditorModeSwitcher
@@ -15,7 +14,6 @@ namespace Editor
 
         private static void ModeChanged(PlayModeStateChange state)
         {
-            Debug.Log("ModeChanged: " + state);
             IModeChanged[] modes = FindHelper.FindAllAssetsOfType<IModeChanged>();
             foreach (IModeChanged mode in modes)
             {

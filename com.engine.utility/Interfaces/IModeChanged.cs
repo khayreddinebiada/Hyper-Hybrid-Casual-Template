@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace Engine
+namespace HCEngine
 {
     public interface IModeChanged
     {

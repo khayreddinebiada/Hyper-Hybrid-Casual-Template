@@ -1,9 +1,9 @@
 using UnityEditor.Build.Reporting;
 using System.Diagnostics.Contracts;
 using UnityEditor.Build;
-using Engine.Linq;
-using Editor;
-using Engine;
+using HCEngine.Linq;
+using HCEditor;
+using HCEngine;
 
 class BuildProcessor : IPreprocessBuildWithReport
 {
@@ -13,7 +13,8 @@ class BuildProcessor : IPreprocessBuildWithReport
     {
         AssetsSettings settings = AssetHelper.FindScribtableObjectOfType<AssetsSettings>();
 
-        Contract.Requires(!settings.IsNull());
+        Contract.Assert(!settings.IsNull());
+        Contract.EndContractBlock();
 
         IBuild[] builds = FindHelper.FindAllAssetsOfType<IBuild>();
 

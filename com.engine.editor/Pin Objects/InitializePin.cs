@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace Editor.pin
+namespace HCEditor.pin
 {
     [InitializeOnLoad]
     sealed class InitializePin : UnityEditor.Editor

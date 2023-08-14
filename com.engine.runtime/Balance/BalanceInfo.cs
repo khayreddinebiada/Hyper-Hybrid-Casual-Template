@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Engine.Balance
+namespace HCEngine.Balance
 {
     public abstract class BalanceInfo : ScriptableObject, IBalanceInfo
     {

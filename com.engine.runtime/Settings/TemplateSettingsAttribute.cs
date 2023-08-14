@@ -1,5 +1,5 @@
 
-namespace Engine.Attribute
+namespace HCEngine.Attributes
 {
     [System.AttributeUsage(System.AttributeTargets.Class)]
     public class TemplateSettingsAttribute : System.Attribute

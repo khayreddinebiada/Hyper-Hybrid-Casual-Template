@@ -1,4 +1,4 @@
-namespace Engine
+namespace HCEngine.Data
 {
     public interface IData : IResetData
     {

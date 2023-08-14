@@ -1,7 +1,7 @@
-using Engine.Attribute;
+using HCEngine.Attributes;
 using UnityEngine;
 
-namespace Editor.pin
+namespace HCEditor.pin
 {
     [TemplateSettings(FilePath, FileName)]
     internal sealed class PinSettings : ScriptableObject

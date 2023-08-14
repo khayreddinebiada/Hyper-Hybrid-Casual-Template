@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Engine.utility
+namespace HCEngine.Data
 {
     public static class JsonConverter
     {

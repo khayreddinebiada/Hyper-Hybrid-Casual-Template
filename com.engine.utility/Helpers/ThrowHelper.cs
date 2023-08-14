@@ -3,7 +3,7 @@ using System.Diagnostics.Contracts;
 using System.Collections.Generic;
 using System;
 
-namespace Engine.Diagnostics
+namespace HCEngine.Diagnostics
 {
     [Pure]
     public static class ThrowHelper
@@ -18,6 +18,10 @@ namespace Engine.Diagnostics
             throw new ArgumentException(GetResourceName(resource));
         }
 
+        public static void ThrowArgumentException(ExceptionArgument argument)
+        {
+            throw new ArgumentException(GetArgumentName(argument));
+        }
         public static void ThrowArgumentException(ExceptionResource resource, ExceptionArgument argument)
         {
             throw new ArgumentException(GetResourceName(resource), GetArgumentName(argument));

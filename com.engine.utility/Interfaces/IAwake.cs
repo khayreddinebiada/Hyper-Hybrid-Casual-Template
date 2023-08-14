@@ -1,4 +1,4 @@
-namespace Engine
+namespace HCEngine
 {
     public interface IAwake
     {

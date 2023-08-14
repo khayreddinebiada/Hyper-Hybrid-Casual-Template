@@ -1,7 +1,7 @@
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Engine.Linq
+namespace HCEngine.Linq
 {
     public static class EngineExtension
     {

@@ -2,8 +2,9 @@
     "name": "com.template.engine",
     "rootNamespace": "",
     "references": [
-        "GUID:54241ea39a4ef4845bdbd746e5c7a252",
-        "GUID:08297ee21af0e7f4e93f07820c4fc2af"
+        "GUID:08297ee21af0e7f4e93f07820c4fc2af",
+        "GUID:e0103eda7683b454bbedf0af85388c62",
+        "GUID:0eec1c990186dbb4692eaffaff3c0351"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

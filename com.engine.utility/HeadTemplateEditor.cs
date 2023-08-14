@@ -1,19 +1,20 @@
 #if UNITY_EDITOR
-using Engine.Attributes;
+using HCEngine.Attributes;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using Engine;
+using HCEngine;
+using HCEngine.Data;
 
-namespace Editor
+namespace HCEditor
 {
     public class HeadTemplateEditor
     {
-        [MenuItem("Tempate/Reset Data", false, 0)]
+        [MenuItem("Template/Reset Data", false, 0)]
         public static void ResetAllData()
         {
             PlayerPrefs.DeleteAll();
-            Data.ObjectSaver.ClearAllFiles();
+            ObjectSaver.ClearAllFiles();
 
 
             IResetData[] reseters = FindHelper.FindAllAssetsOfType<IResetData>();
@@ -28,11 +29,11 @@ namespace Editor
             Debug.Log("Reset Data assets is finished!...");
         }
 
-        [MenuItem("Tempate/Unlock Data", false, 0)]
+        [MenuItem("Template/Unlock Data", false, 0)]
         public static void UnlockAllData()
         {
             PlayerPrefs.DeleteAll();
-            Data.ObjectSaver.ClearAllFiles();
+            ObjectSaver.ClearAllFiles();
 
             IUnlock[] unlocks = FindHelper.FindAllAssetsOfType<IUnlock>();
 
@@ -44,7 +45,7 @@ namespace Editor
             Debug.Log("Reset Data assets is finished!...");
         }
 
-        [MenuItem("Tempate/Validate Settings", false, 0)]
+        [MenuItem("Template/Validate Settings", false, 0)]
         public static void ValidateAll()
         {
             IValidate[] validates = FindHelper.FindAllAssetsOfType<IValidate>();
@@ -56,7 +57,7 @@ namespace Editor
             Debug.Log("Validate assets is finished!...");
         }
 
-        [MenuItem("Tempate/Save Assets", false, 150)]
+        [MenuItem("Template/Save Assets", false, 150)]
         public static void SaveAssets()
         {
             Object[] assets = AssetHelper.GetAssetsOfAttribute(typeof(AssetAttribute), true).ToArray();
@@ -64,7 +65,6 @@ namespace Editor
             foreach (Object asset in assets)
             {
                 asset?.SaveObject();
-                Debug.Log(asset.name);
             }
 
             Debug.Log("Save assets is finished!...");

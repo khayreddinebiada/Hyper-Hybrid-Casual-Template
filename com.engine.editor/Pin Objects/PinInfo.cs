@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace Editor.pin
+namespace HCEditor.pin
 {
     [System.Serializable]
     public class PinInfo

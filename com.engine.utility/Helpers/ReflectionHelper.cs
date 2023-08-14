@@ -1,11 +1,11 @@
 ﻿#if UNITY_EDITOR
 using System.Collections.Generic;
-using Engine.Diagnostics;
+using HCEngine.Diagnostics;
 using System.Reflection;
 using System.Linq;
 using System;
 
-namespace Editor
+namespace HCEditor
 {
     public static class ReflectionHelper
     {

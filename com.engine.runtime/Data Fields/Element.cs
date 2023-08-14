@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 
-namespace Engine.Data
+namespace HCEngine.Data
 {
     [Serializable]
     internal struct Element<T> : IComparable<Element<T>>, IEquatable<Element<T>>

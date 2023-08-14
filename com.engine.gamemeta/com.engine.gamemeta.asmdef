@@ -1,0 +1,19 @@
+{
+    "name": "com.engine.gamemeta",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9cf4df86725773f4fbe1a24aa6723d4a",
+        "GUID:08297ee21af0e7f4e93f07820c4fc2af",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:0eec1c990186dbb4692eaffaff3c0351"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

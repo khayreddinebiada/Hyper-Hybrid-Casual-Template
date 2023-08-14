@@ -1,12 +1,14 @@
 #if UNITY_EDITOR
+using Object = UnityEngine.Object;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
-using Engine.Diagnostics;
+using HCEngine.Diagnostics;
 using UnityEditor;
 using UnityEngine;
 using System.IO;
+using System;
 
-namespace Editor
+namespace HCEditor
 {
     public static class AssetHelper
     {
@@ -17,7 +19,7 @@ namespace Editor
             string[] guids = AssetDatabase.FindAssets("t:" + typeof(T).Name);
 
             if (guids == null || guids.Length == 0)
-                return null;
+                return Array.Empty<T>();
 
             T[] a = new T[guids.Length];
             for (int i = 0; i < guids.Length; i++)
@@ -49,7 +51,7 @@ namespace Editor
             string[] guids = AssetDatabase.FindAssets("t:" + type.Name);
 
             if (guids == null || guids.Length == 0)
-                return null;
+                return Array.Empty<Object>();
 
             Object[] a = new Object[guids.Length];
             for (int i = 0; i < guids.Length; i++)
@@ -148,7 +150,6 @@ namespace Editor
                         yield return obj;
             }
         }
-
     }
 }
 #endif

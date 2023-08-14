@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using System.Security;
 using NUnit.Framework;
-using Engine.Diagnostics;
+using HCEngine.Diagnostics;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Engine.Data
+namespace HCEngine.Data
 {
     [Serializable]
     public class FieldArray<T> : IEnumerable<T>
@@ -14,7 +14,7 @@ namespace Engine.Data
         }
 
 
-        [SerializeField, HideInInspector] private bool _autoSave;
+        [SerializeField] private bool _autoSave;
         [SerializeField] private string _key;
         [SerializeField] private string _fileName;
         [SerializeField] private List<Element<T>> _elements;
@@ -162,13 +162,31 @@ namespace Engine.Data
             return FindFieldKey(index);
         }
 
+        public void DeleteKeys()
+        {
+            _elements.ForEach((element) =>
+            {
+                element.Field.DeleteKey();
+            });
+        }
+
         public void Clear()
         {
-            foreach (var item in _elements)
-            {
-                item.Field.Delete();
-            }
             _elements.Clear();
+        }
+
+        public void ClearAndSave()
+        {
+            DeleteKeys();
+            Clear();
+        }
+
+        public void LoadAll()
+        {
+            foreach (Element<T> element in _elements)
+            {
+                element.Field.Load();
+            }
         }
 
         public T Find(Predicate<T> match)
@@ -345,7 +363,7 @@ namespace Engine.Data
 
         private void RemoveAtIndex(int index)
         {
-            _elements[index].Field.Delete();
+            _elements[index].Field.DeleteKey();
             _elements.RemoveAt(index);
         }
 

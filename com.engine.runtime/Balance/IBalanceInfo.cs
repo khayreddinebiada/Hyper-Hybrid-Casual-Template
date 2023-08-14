@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Engine.Balance
+namespace HCEngine.Balance
 {
-    public interface IBalanceInfo : ICloneable
+    public interface IBalanceInfo
     {
         string Name { get; }
         float GetValue(int level);

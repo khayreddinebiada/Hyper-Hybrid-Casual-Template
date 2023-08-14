@@ -1,4 +1,4 @@
-﻿using Engine.Diagnostics;
+﻿using HCEngine.Diagnostics;
 using System;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
-namespace Editor
+namespace HCEditor
 {
     public static class SaveHelper
     {

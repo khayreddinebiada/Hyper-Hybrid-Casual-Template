@@ -1,8 +1,8 @@
-﻿using Engine.Attribute;
+﻿using HCEngine.Attributes;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor
+namespace HCEditor
 {
     internal class SettingsInfo
     {

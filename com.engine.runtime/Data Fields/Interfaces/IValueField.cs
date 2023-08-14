@@ -1,4 +1,4 @@
-namespace Engine.Data
+namespace HCEngine.Data
 {
     public interface IValueField<T>
     {
@@ -10,6 +10,6 @@ namespace Engine.Data
 
         public void Save();
 
-        public void Delete();
+        public void DeleteKey();
     }
 }

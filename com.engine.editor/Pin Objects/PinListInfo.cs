@@ -1,9 +1,9 @@
-using Engine.utility;
+using HCEngine.Data;
 using System;
 using System.Collections.Generic;
 using UnityEditor;
 
-namespace Editor.pin
+namespace HCEditor.pin
 {
     public static class PinListInfo
     {
@@ -61,6 +61,9 @@ namespace Editor.pin
 
         internal static void UpdatePinsInfo(PinInfo[] infos)
         {
+            if (infos == null)
+                return;
+
             Count = infos.Length;
             PinInfo = new List<PinInfo>(infos);
 

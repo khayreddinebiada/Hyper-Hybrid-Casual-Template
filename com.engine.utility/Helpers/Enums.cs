@@ -1,4 +1,4 @@
-﻿namespace Engine.Diagnostics
+﻿namespace HCEngine.Diagnostics
 {
     public enum ExceptionArgument
     {

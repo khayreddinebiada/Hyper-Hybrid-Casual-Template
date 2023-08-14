@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor.pin
+namespace HCEditor.pin
 {
     public class PinSceneView : UnityEditor.Editor
     {

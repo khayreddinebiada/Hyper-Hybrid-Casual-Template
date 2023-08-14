@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor
+namespace HCEditor
 {
     public static class FindHelper
     {
